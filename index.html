@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 圣诞特别礼物</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- 圣诞彩灯 -->
+    <div class="christmas-lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <!-- 雪花效果 -->
+    <div id="snowflakes"></div>
+
+    <div class="container">
+        <!-- 开始页面 -->
+        <div id="startPage">
+            <div class="header">
+                <h1>🎄 圣诞特别礼物 🎁</h1>
+                <div class="subtitle">致：卢佳慧</div>
+            </div>
+            <div class="intro">
+                <p>嗨！这是一份特别的圣诞礼物 🎅</p>
+                <p style="margin-top: 15px;">准备了10道关于我们的问题</p>
+                <p style="margin-top: 10px;">如果你能答对80%以上...</p>
+                <p style="margin-top: 10px; font-weight: bold; color: #c41e3a;">就会有惊喜等着你哦！✨</p>
+            </div>
+            <button class="btn" onclick="startQuiz()">开始答题 🚀</button>
+        </div>
+
+        <!-- 问答页面 -->
+        <div id="quizPage" class="hidden">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div id="questionContainer"></div>
+            <button class="btn" onclick="submitAnswer()">提交答案</button>
+        </div>
+
+        <!-- 结果页面 -->
+        <div id="resultPage" class="hidden">
+            <div class="result-card">
+                <h2 style="color: #c41e3a;">🎊 答题完成！</h2>
+                <div class="score" id="scoreDisplay"></div>
+                <div class="result-message" id="resultMessage"></div>
+                <div id="videoSection" class="hidden">
+                    <p style="color: #c41e3a; font-weight: bold; margin-bottom: 20px;">
+                        🎉 恭喜你！这是为你准备的特别视频 🎥
+                    </p>
+                    <div class="video-container">
+                        <iframe 
+                            id="videoFrame"
+                            src="" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <button class="btn" onclick="restartQuiz()" style="margin-top: 30px;">重新开始</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

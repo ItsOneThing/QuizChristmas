@@ -143,7 +143,7 @@ function showResult() {
     if (percentage >= 80) {
         message = '太棒了！！🎉<br>这是为你准备的特别惊喜！';
         document.getElementById('videoSection').classList.remove('hidden');
-        document.getElementById('videoFrame').src = './video/卢佳慧传之我重生在米理当学神.mov';
+        document.getElementById('videoFrame').src = 'https://youtu.be/xPfsyDTFwGQ';
     } else if (percentage >= 60) {
         message = '不错哦！还算了解我～😊<br>不过还有提升空间哦！';
     } else {

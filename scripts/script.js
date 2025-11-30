@@ -26,7 +26,7 @@ const questions = [
     },
     {
         question: "Dario最喜欢什么？",
-        options: ["男人", "女人", "Angela", "GAL"],
+        options: ["男人", "女人", "AM", "GAL"],
         correct: 2
     },
     {
@@ -143,7 +143,13 @@ function showResult() {
     if (percentage >= 80) {
         message = '太棒了！！🎉<br>这是为你准备的特别惊喜！';
         document.getElementById('videoSection').classList.remove('hidden');
-        document.getElementById('videoFrame').src = 'https://youtu.be/xPfsyDTFwGQ?si=r3bdk-qLw-iQ6tmT';
+        const videoLink = "https://1drv.ms/v/c/9cb146d93e85a0c4/IQCxvFnxxE1bQYmMW2j0ZIEuAZoE5DnEV5_H2Ch7rTNP3Lk?e=oEMBsf";
+        document.getElementById('videoFrame').style.display = 'none'; // 隐藏 iframe
+        const openButton = document.createElement('button');
+        openButton.textContent = '点击观看视频 🎬';
+        openButton.onclick = () => window.open(videoLink, '_blank');
+        document.getElementById('videoSection').appendChild(openButton);
+
     } else if (percentage >= 60) {
         message = '不错哦！还算了解我～😊<br>不过还有提升空间哦！';
     } else {
